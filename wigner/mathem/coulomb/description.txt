@@ -1,0 +1,12 @@
+#######################################################################
+#                          Code by TheKoke                            #
+#           Module that calculates Coulomb Wave Functions             #
+#     Every numerical and analytical solutions of functions here      #
+#            In future, all of those can be replaced with             #
+#                more efficient algortihms or formulas                #
+#######################################################################
+
+
+I. J. Thompson. Coulomb Functions: https://dlmf.nist.gov/33
+Computation tutorial: https://dlmf.nist.gov/33.23#iv
+http://www.scholarpedia.org/article/The_R-matrix_theory_in_nuclear_and_atomic_physics 

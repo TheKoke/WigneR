@@ -1,2 +1,0 @@
-I. J. Thompson. Coulomb Functions: https://dlmf.nist.gov/33
-Computation tutorial: https://dlmf.nist.gov/33.23#iv
