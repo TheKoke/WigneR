@@ -90,5 +90,19 @@ class Nuclon(Particle):
         pass
 
 
+class Nuclei:
+    def __init__(self, z: int, a: int) -> None:
+        self.__z = z
+        self.__a = a
+
+    @property
+    def z(self) -> int:
+        return self.__z
+
+    @property
+    def a(self) -> int:
+        return self.__a
+
+
 if __name__ == '__main__':
     pass
