@@ -13,11 +13,32 @@ import numpy
 
 
 def tricomi_function(a: int, b: int, z: complex) -> complex:
-    pass
+    return kummer_function(a, b, z) * gamma_function(1 - b) / gamma_function(a + 1 - b) + \
+           kummer_function(a + 1 - b, 2 - b, z) * gamma_function(b - 1) / gamma_function(a)
 
 
-def kummers_function(a: int, b: int, z: complex) -> complex:
-    pass
+def kummer_function(a: int, b: int, z: complex) -> complex:
+    result = 1.0
+
+    epsilon = 1e-10
+    current = complex(1.0, 0.0)
+
+    n = 1
+    while (current * current.conjugate()).real > epsilon:
+        constant = rising_factorial(a, n) / (rising_factorial(b, n) * gamma_function(n + 1).real)
+        current = constant * (z ** n)
+
+        result += current
+        n += 1
+
+    return result
+
+
+def rising_factorial(a: int, n: int) -> int:
+    if n == 0:
+        return 1
+
+    return numpy.arange(a, a + n).prod()
 
 
 def gamma_function(z: complex) -> complex:
@@ -51,4 +72,4 @@ def gamma_function(z: complex) -> complex:
 
 
 if __name__ == '__main__':
-    print(gamma_function(complex(5, 1)))
+    print(kummer_function(-2.5, 1.5, complex(0, 1)))
